@@ -1,0 +1,223 @@
+<html>
+<meta charset="utf-8">
+<title>Booking</title>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="kidscinemaCSS.css">
+  <script type="text/javascript">
+    function printPrice() {
+      var price = getRBtnName('tickets') * 1;
+      var quantity = document.getElementById("quantity").value * 1;
+      var total = 0;
+      var sentence = "";
+
+
+      for (var i = 1; i <= quantity; i++) {
+
+        total += price;
+        sentence += "<br>";
+      }
+      sentence += 'Total cost: $' + total;
+      document.getElementById("inserts").innerHTML = sentence;
+      // alert(movie+'\n'+name+'\n'+price+'\n'+quantity+'\n'+sentence);
+    }
+
+    function getRBtnName(GrpName) {
+      var sel = document.getElementsByName(GrpName);
+      var fnd = -1;
+      var str = '';
+      for (var i = 0; i < sel.length; i++) {
+        if (sel[i].checked == true) { str = sel[i].value; fnd = i; }
+      }
+      //  return fnd;   // return option index of selection
+      // comment out next line if option index used in line above  
+
+      return str;
+    }
+
+  </script>
+</head>
+
+<body>
+  <header>
+    <img src="logo.jpg" alt="Kids Cinrma Logo" width="200" height="120">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </header>
+
+  <ul class="droplinetabs" width="100">
+    <li><a href="kidscinema.html">Home</a></li>
+
+
+    <li><a href="Gallery.html">Gallery</a>
+
+    </li>
+    <li><a href="contactUs.html">Contact us</a>
+
+    </li>
+    <li><a href="Location.html">Location</a></li>
+
+    <li><a href="AboutUs.html">About us</a></li>
+
+
+  </ul>
+  </li>
+
+
+
+  <div class="dropdown" style="top:16% ; position:absolute ; left:90% ">
+
+
+    <button class="dropbtn""><img src=" list.png" width="35" height="35"></button>
+    <div class="dropdown-content">
+
+      <a href="kidscinema.html"><img src="h.png" width="35" height="35"></a>
+      <a href="Gallery.html"><img src="g.png" width="35" height="35"></a>
+      <a href="contactUs.html"><img src="c.png" width="35" height="35"></a>
+      <a href="Location.html"><img src="l.png" width="35" height="35"></a>
+    </div>
+  </div>
+
+  <div class="checkbox">
+
+    <br>
+    <br>
+    <br>
+    <h1 style="text-align:center ; font-size:50px  ; color:#657383 ; text-shadow:4px 4px 6px grey;">Ticket Booking <img
+        src="ticket.png" width="70" height="70"></h1>
+    <div style="position:relative ; text-align: center ; background-color:white ; width:45% ; height: 180% ; left:30%">
+
+      <form method="post" action="success.html">
+
+
+        <br>
+        <br>
+        <div>
+          How many: <input type="text" name="quantity" id="quantity" value="2" size="3" />
+
+        </div>
+        <br>
+        <div>
+          <label> <input type="radio" name="tickets" value="3" />Standard </label>
+
+          <label> <input type="radio" name="tickets" value="8" checked />Premium</label>
+        </div>
+        <br>
+        <hr>
+        <p> ________ Standard _________</p>
+        <input type="checkbox" name="seat" value="E1"> <label> E1<img src="chair.png" width="25" height="25"></label>
+        <input type="checkbox" name="seat" value="E2"> <label> E2<img src="chair.png" width="25" height="25"></label>
+        <input type="checkbox" name="seat" value="E3"> <label> E3<img src="chair.png" width="25" height="25"></label>
+        <input type="checkbox" name="seat" value="E4"> <label> E4<img src="chair.png" width="25" height="25"></label>
+        <input type="checkbox" name="seat" value="E5"> <label> E5<img src="chair.png" width="25" height="25"></label>
+        <input type="checkbox" name="seat" value="E6"> <label> E6<img src="chair.png" width="25" height="25"></label>
+        <br>
+
+        <input type="checkbox" name="seat" value="D1"> <label> D1<img src="chair.png" width="25" height="25"></label>
+        <input type="checkbox" name="seat" value="D2"> <label> D2<img src="chair.png" width="25" height="25"></label>
+        <input type="checkbox" name="seat" value="D3"> <label> D3<img src="chair.png" width="25" height="25"></label>
+        <input type="checkbox" name="seat" value="D4"> <label> D4<img src="chair.png" width="25" height="25"></label>
+        <input type="checkbox" name="seat" value="D5"> <label> D5<img src="chair.png" width="25" height="25"></label>
+        <input type="checkbox" name="seat" value="D6"> <label> D6<img src="chair.png" width="25" height="25"></label>
+        <br>
+
+        <input type="checkbox" name="seat" value="C1"> <label> C1<img src="chair.png" width="25" height="25"></label>
+        <input type="checkbox" name="seat" value="C2"> <label> C2<img src="chair.png" width="25" height="25"></label>
+        <input type="checkbox" name="seat" value="C3"> <label> C3<img src="chair.png" width="25" height="25"></label>
+        <input type="checkbox" name="seat" value="C4"> <label> C4<img src="chair.png" width="25" height="25"></label>
+        <input type="checkbox" name="seat" value="C5"> <label> C5<img src="chair.png" width="25" height="25"></label>
+        <input type="checkbox" name="seat" value="C6"> <label> C6<img src="chair.png" width="25" height="25"></label>
+        <br>
+
+        <p> ________ Premium _________</p>
+        <input type="checkbox" name="seat" value="B1"> <label> B1<img src="chair.png" width="25" height="25"></label>
+        <input type="checkbox" name="seat" value="B2"> <label> B2<img src="chair.png" width="25" height="25"></label>
+        <input type="checkbox" name="seat" value="B3"> <label> B3<img src="chair.png" width="25" height="25"></label>
+        <input type="checkbox" name="seat" value="B4"> <label> B4<img src="chair.png" width="25" height="25"></label>
+        <input type="checkbox" name="seat" value="B5"> <label> B5<img src="chair.png" width="25" height="25"></label>
+        <input type="checkbox" name="seat" value="B6"> <label> B6<img src="chair.png" width="25" height="25"></label>
+        <input type="checkbox" name="seat" value="B7"> <label> B7<img src="chair.png" width="25" height="25"></label>
+        <input type="checkbox" name="seat" value="B8"> <label> B8<img src="chair.png" width="25" height="25"></label>
+        <br>
+
+        <input type="checkbox" name="seat" value="A1"> <label> A1<img src="chair.png" width="25" height="25"></label>
+        <input type="checkbox" name="seat" value="A2"> <label> A2<img src="chair.png" width="25" height="25"></label>
+        <input type="checkbox" name="seat" value="A3"> <label> A3<img src="chair.png" width="25" height="25"></label>
+        <input type="checkbox" name="seat" value="A4"> <label> A4<img src="chair.png" width="25" height="25"></label>
+        <input type="checkbox" name="seat" value="A5"> <label> A5<img src="chair.png" width="25" height="25"></label>
+        <input type="checkbox" name="seat" value="A6"> <label> A6<img src="chair.png" width="25" height="25"></label>
+        <input type="checkbox" name="seat" value="A7"> <label> A7<img src="chair.png" width="25" height="25"></label>
+        <input type="checkbox" name="seat" value="A8"> <label> A8<img src="chair.png" width="25" height="25"></label>
+        <br>
+
+        <br>
+        <br>
+
+        <br><label>First Name : <br><input type="text" name="fname" id="textbox" value="" required></label><br>
+        <br><label>Last Name : <br><input type="text" name="lname" id="textbox000" required></label><br>
+        <br><label>Email: <br><input type="email" placeholder="kidsCinema@kidscompany.com" name="email"
+            required></label><br>
+        <br><label>Phone Number: <br><input type="tel" placeholder="+966 *********" pattern="\966 +\d{3}+\d{3}+d{3} "
+            name="PHONE" required></label><br>
+
+        <br>
+
+        <div>
+          <input type="button" value="total price" onclick="printPrice()" />
+        </div>
+      </form>
+
+      <div id="inserts"> </div>
+
+    </div>
+    <button class="button"
+      style="vertical-align:middle; position: absolute ;text-align:center  ;width:10% ; left:47% ; height:7% ; font-weight:bold ; top:210%"><span>
+        Booking </span></button>
+    <footer class="footer-distributed">
+
+      <div class="footer-left">
+
+        <p class="footerimg"><img src="logo2.jpg" alt="logo" width="70" height="90"></p>
+
+        <p class="footer-company-name"><b>&copy; kids Cinema 2020. All rights reserved</b> </p>
+      </div>
+
+      <div class="footer-center">
+
+        <div>
+
+          <p>Riyadh Park, Riyadh</p>
+        </div>
+
+        <div>
+          <p>+966-55 678 9040</p>
+        </div>
+
+        <div>
+
+          <p><a href="mailto:kidsCinema@kidscompany.com">kidsCinema@kidscompany.com</a></p>
+        </div>
+
+      </div>
+      <br>
+      <br>
+      <div class="footer-right">
+
+        <div class="footer-icons">
+
+          <a href="#"><img src="twitter.png" width="50" height="50"></a>
+          <a href="https://www.linkedin.com/company/cinema-kids"><img src="linkedin.png" width="50" height="50"></a>
+          <a href="https://www.instagram.com/kidscinema_club/?igshid=aqcjv5wd4qk0"><img src="instagram.png" width="50"
+              height="50"></a>
+          <a
+            href="https://m.facebook.com/KidsCinemaMajorcineplex/about/?refsrc=https%3A%2F%2Fm.facebook.com%2Fpg%2FKidsCinemaMajorcineplex%2Fabout%2F&_rdr"><img
+              src="facebook.png" width="50" height="50"></i></a>
+
+        </div>
+
+      </div>
+
+    </footer>
+</body>
+
+</html>
